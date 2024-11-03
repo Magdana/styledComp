@@ -55,7 +55,7 @@ function UsersPosts() {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const responce = await axios.get(
+      const response = await axios.get(
         "https://jsonplaceholder.typicode.com/users"
       );
       setUsers(response.data);
@@ -64,7 +64,7 @@ function UsersPosts() {
   }, []);
 
   const fetchPosts = async (userId) => {
-    const responce = await axios.get(
+    const response = await axios.get(
       `https://jsonplaceholder.typicode.com/posts?userId=${userId}`
     );
     setPosts(response.data);
